@@ -1,0 +1,94 @@
+<div class="row">
+		   	   <div class="col-md-2 sidebar">
+					<div id="sidebar-wrapper">
+			            <ul class="sidebar-nav">
+			            	 <li class="sidebar-brand">
+			                    Catagory
+			                </li>
+			                <li >
+			                    <label>
+								      <input type="checkbox"> Cloths
+								</label>
+			                </li>
+			                 <li>
+			                    <label>
+								      <input type="checkbox"> Electronics
+								</label>
+			                </li>
+			                 <li>
+			                    <label>
+								      <input type="checkbox"> Books
+								</label>
+			                </li>
+			                 <li>
+			                    <label>
+								      <input type="checkbox"> Movies
+								</label>
+			                </li>
+			                <li>
+			                    <a href="#/offlinePurchase" class="btn btn-primary">offline purchase</a>
+			                </li>
+			            </ul>
+			        </div>
+		   	   </div>
+		   	   <div class="col-md-10 mainContent" >
+		   	   	  <div class="row filter">
+		   	   	  	<div class="col-md-3 col-xs-3">
+		   	   	  		<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+		   	   	  	</div>
+		   	   	  	<div class="col-md-3 col-xs-3">
+		   	   	  		<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+		   	   	  	</div>
+		   	   	  	<div class="col-md-3 col-xs-3">
+		   	   	  		<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+		   	   	  	</div>
+		   	   	  	<div class="col-md-3 col-xs-3">
+		   	   	  		<select class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+		   	   	  	</div>
+		   	   	  </div>
+		   	   	  <hr>
+		   	   	  <div class="row">
+		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupan in resultData">
+					    <div class="offer-small offer">
+					        <div class="vendor-image" style="background-color:#ffffff">
+					            <a href="{{coupan.CouponSite}}"><img src="http://cdn01.coupondunia.in/sitespecific/media/generated/merchantlogos/logo_5e29580_97.jpg?v=1413531812" alt="eBay"></a>
+					        </div>
+					        <div id="c100127" class="offer-title ">
+					            <a href="#">{{coupan.CouponCategory}}</a>
+					        </div>
+				            <div class="offer-getcode">
+								<div id="c100127" href="http://www.coupondunia.in/load/100127/" class="btn btn-cd btn-coupon coupon-click" data-type="online" data-clipboard-text="COUPOND100" data-couponid="100127" data-coupontype="MultipleUseCoupon" data-clickarea="HomeButton" data-websitename="eBay" data-websiteid="97" data-code="COUPOND100" data-url="http://www.coupondunia.in/load/100127/">{{coupan.CouponRank}}</div>
+				             </div>
+				            
+			                <div class="vendor-offer-count trim-content">
+			                	<a href="http://www.coupondunia.in/ebay">See all 32 eBay offers</a>
+			                </div> 
+					     </div>
+					</div>
+		   	   	  </div>
+		   	   </div>
+		   </div>
