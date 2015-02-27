@@ -44,16 +44,16 @@
 		   	   <div class="col-md-10 mainContent" >
 		   	   	  <div class="row filter">
 		   	   	  	<div class="col-md-3 col-xs-3 col-md-offset-9">
-		   	   	  		<select class="form-control">
-						  <option>Discount %</option>
-						  <option>Expiry Date</option>
-						  <option>Ranking</option>
+		   	   	  		<select class="form-control" ng-model="sortByData">
+						  <option value="discount_pc">Discount %</option>
+						  <option value="valid_till">Expiry Date</option>
+						  <option value="rank">Ranking</option>
 						</select>
 		   	   	  	</div>
 		   	   	  </div>
 		   	   	  <hr>
 		   	   	  <div class="row">
-		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData">
+		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData | orderBy:sortByData">
 					    <div class="offer-small offer">
 					        <div class="vendor-image" style="background-color:#ffffff">
 					            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>
