@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	couponFetcher.services.constant('backendURLs',{
-        output : 'data/data.json',
+        output : 'data/newcoupondata.json',
         productMaster : 'data/ProductMaster.json'
 	})
 

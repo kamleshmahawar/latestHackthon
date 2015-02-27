@@ -7,22 +7,32 @@
 			                </li>
 			                <li >
 			                    <label>
-								      <input type="checkbox"> Cloths
+								      <input type="checkbox"> Mobile
 								</label>
 			                </li>
 			                 <li>
 			                    <label>
-								      <input type="checkbox"> Electronics
+								      <input type="checkbox"> Laptop
 								</label>
 			                </li>
 			                 <li>
 			                    <label>
-								      <input type="checkbox"> Books
+								      <input type="checkbox"> Shirt
 								</label>
 			                </li>
 			                 <li>
 			                    <label>
-								      <input type="checkbox"> Movies
+								      <input type="checkbox"> Trousers
+								</label>
+			                </li>
+			                <li>
+			                    <label>
+								      <input type="checkbox"> Kitchen
+								</label>
+			                </li>
+			                <li>
+			                    <label>
+								      <input type="checkbox"> Cricket
 								</label>
 			                </li>
 			                <li>
@@ -72,20 +82,19 @@
 		   	   	  </div>
 		   	   	  <hr>
 		   	   	  <div class="row">
-		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupan in resultData">
+		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData">
 					    <div class="offer-small offer">
 					        <div class="vendor-image" style="background-color:#ffffff">
-					            <a href="{{coupan.CouponSite}}"><img src="http://cdn01.coupondunia.in/sitespecific/media/generated/merchantlogos/logo_5e29580_97.jpg?v=1413531812" alt="eBay"></a>
+					            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>
 					        </div>
 					        <div id="c100127" class="offer-title ">
-					            <a href="#">{{coupan.CouponCategory}}</a>
+					            <a href="#">{{coupon.coupon_info}} on {{coupon.prod_name}}</a>
 					        </div>
 				            <div class="offer-getcode">
-								<div id="c100127" href="http://www.coupondunia.in/load/100127/" class="btn btn-cd btn-coupon coupon-click" data-type="online" data-clipboard-text="COUPOND100" data-couponid="100127" data-coupontype="MultipleUseCoupon" data-clickarea="HomeButton" data-websitename="eBay" data-websiteid="97" data-code="COUPOND100" data-url="http://www.coupondunia.in/load/100127/">{{coupan.CouponRank}}</div>
+								<div href="#" class="btn btn-cd btn-coupon coupon-click" >Avail {{coupon.discount_pc}} %</div>
 				             </div>
-				            
-			                <div class="vendor-offer-count trim-content">
-			                	<a href="http://www.coupondunia.in/ebay">See all 32 eBay offers</a>
+				             <div class="vendor-offer-count trim-content">
+			                	<a href="#">{{coupon.prod_category}}</a>
 			                </div> 
 					     </div>
 					</div>

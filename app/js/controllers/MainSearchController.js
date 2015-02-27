@@ -9,7 +9,7 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 	$scope.search = function(){
 		var query = $scope.query;
 		couponSearchService.search(query).then( 
-			 function(response){ $scope.resultData=response.Coupons; $scope.emptyPage=false;} , 
+			 function(response){ $scope.resultData=response; $scope.emptyPage=false;} , 
 			 function(status){$scope.emptyPage=true;alert(status);}
 		)
 	}
