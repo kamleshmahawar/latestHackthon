@@ -7,7 +7,7 @@
 			                </li>
 			                <li >
 			                    <label>
-								      <input type="checkbox"> Mobile
+								      <input type="checkbox" checklist-model="filter" checklist-value="mobile"> Mobile
 								</label>
 			                </li>
 			                 <li>
@@ -53,7 +53,7 @@
 		   	   	  </div>
 		   	   	  <hr>
 		   	   	  <div class="row">
-		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData | orderBy:sortByData">
+		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData | orderBy:sortByData | filter:filter">
 					    <div class="offer-small offer">
 					        <div class="vendor-image" style="background-color:#ffffff">
 					            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>

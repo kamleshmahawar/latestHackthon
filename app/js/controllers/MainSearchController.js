@@ -5,7 +5,6 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 
 	$scope.rowCount=[];
     $scope.count=0;
-
 	$scope.search = function(){
 		var query = $scope.query;
 		couponSearchService.search(query).then( 
@@ -30,6 +29,27 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 	  	$scope.rowCount.pop();
 	  }
 	}
+
+    
+    $scope.colourIncludes = [];
+    
+    $scope.includeColour = function(colour) {
+        var i = $.inArray(colour, $scope.colourIncludes);
+        if (i > -1) {
+            $scope.colourIncludes.splice(i, 1);
+        } else {
+            $scope.colourIncludes.push(colour);
+        }
+    }
+    
+    $scope.colourFilter = function(fruit) {
+        if ($scope.colourIncludes.length > 0) {
+            if ($.inArray(fruit.colour, $scope.colourIncludes) < 0)
+                return;
+        }
+        
+        return fruit;
+    }
 
 })
 

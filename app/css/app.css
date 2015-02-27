@@ -30,18 +30,17 @@
     }
     .logo{
       width: 200px;
-      height: 51px;
+      height: 100px;
+      position: absolute;
     }
 
      .header{
       width: 100%;
       height: 150px;
-      background-image: url("../img/banner-overlay-black.png"),url("../img/banner.jpg");
+      background-image: url("../img/banner-overlay-black.png"),url("../img/headerbg.jpg");
       color: white;
       font-family: proxima;
       font-weight: 500;
-      background-repeat: no-repeat;
-      background-size: 100% 150px;
       border-bottom: 2px solid #ccc;
       position: fixed;
       z-index: 5;
@@ -52,11 +51,11 @@
      .footer {
       width: 100%;
       padding-left: 10%;
-    color: #ececec;
-    background-color: #606060;
-    bottom: 0px;
-    position: fixed;
-  }
+      color: #ececec;
+      background-image: url("../img/banner-overlay-black.png"),url("../img/headerbg.jpg");
+      bottom: 0px;
+      position: fixed;
+    }
   .sidebar{
     position: fixed;
     z-index: 5;
