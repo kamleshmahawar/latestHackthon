@@ -3,17 +3,8 @@
 couponFetcher.controller('mainSearchController',function($scope ,couponSearchService ){
 
 
-	$scope.searchFor="email";
-	$scope.query="";
-
-	$scope.fq="";
-
-	$scope.pageSize=20;
-	$scope.pageNumber=1;
-	$scope.emptyPage=true;
-	$scope.resultData=null;
-	$scope.showFilters=false;
-
+	$scope.rowCount=[];
+    $scope.count=0;
 
 	$scope.search = function(){
 		var query = $scope.query;
@@ -21,6 +12,23 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 			 function(response){ $scope.resultData=response.Coupons; $scope.emptyPage=false;} , 
 			 function(status){$scope.emptyPage=true;alert(status);}
 		)
+	}
+
+	$scope.addRow = function(){
+		$scope.rowCount.push($scope.count);
+		$scope.count++;
+		couponSearchService.offlineData().then( 
+			 function(response){
+				$scope.offlineData=response;
+			} , 
+			 function(status){$scope.emptyPage=true;alert("failed");}
+		);
+	}
+
+	$scope.removeRow = function(){
+	  if($scope.rowCount.length>=0){
+	  	$scope.rowCount.pop();
+	  }
 	}
 
 })

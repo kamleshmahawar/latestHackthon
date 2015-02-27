@@ -2,7 +2,6 @@
 <table class="table table-bordered table-striped table-hover">
 	<thead>
 		<tr>
-			<th><input type="checkbox"></th>
 			<th>Catagory</th>
 			<th>Product</th>
 			<th>Quantity</th>
@@ -10,85 +9,15 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td><input type="checkbox"></td>
+		<tr ng-repeat="item in rowCount">
 			<td>
 				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
+				  <option ng-repeat="data in offlineData">{{data.prod_category}}</option>
 				</select>
 			</td>
 			<td>
 				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
-				</select>
-			</td>
-			<td><input type="number" min=1 value=1 class="form-control"></td>
-			<td><input type="date" class="form-control"/></td>
-		</tr>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td>
-				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
-				</select>
-			</td>
-			<td>
-				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
-				</select>
-			</td>
-			<td><input type="number" min=1 value=1 class="form-control"></td>
-			<td><input type="date" class="form-control"/></td>
-		</tr>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td>
-				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
-				</select>
-			</td>
-			<td>
-				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
-				</select>
-			</td>
-			<td><input type="number" min=1 value=1 class="form-control"></td>
-			<td><input type="date" class="form-control"/></td>
-		</tr>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td>
-				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
-				</select>
-			</td>
-			<td>
-				<select class="form-control">
-				  <option>Cloths</option>
-				  <option>Electronics</option>
-				  <option>Books</option>
-				  <option>Movies</option>
+				  <option ng-repeat="data in offlineData">{{data.prod_name}}</option>
 				</select>
 			</td>
 			<td><input type="number" min=1 value=1 class="form-control"></td>
@@ -98,7 +27,7 @@
 </table>
 <div class="row">
 	<div class="col-md-12">
-		<button class="btn btn-primary">Add</button>
-		<button class="btn btn-primary">Remove</button>
+		<button class="btn btn-primary" ng-click="addRow()">Add</button>
+		<button class="btn btn-primary" ng-click="removeRow()">Remove</button>
 	</div>
 </div>
