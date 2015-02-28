@@ -7,45 +7,45 @@
 			                </li>
 			                <li >
 			                    <label>
-								      <input type="checkbox" checklist-model="filter" checklist-value="mobile"> Mobile
+								      <input type="checkbox" ng-model="filter.mobile" ng-true-value="mobile"> Mobile
 								</label>
 			                </li>
 			                 <li>
 			                    <label>
-								      <input type="checkbox"> Laptop
+								      <input type="checkbox" ng-model="filter.laptop" ng-true-value="laptop"> Laptop
 								</label>
 			                </li>
 			                 <li>
 			                    <label>
-								      <input type="checkbox"> Shirt
+								      <input type="checkbox" ng-model="filter.shirt" ng-true-value="shirt"> Shirt
 								</label>
 			                </li>
 			                 <li>
 			                    <label>
-								      <input type="checkbox"> Trousers
+								      <input type="checkbox" ng-model="filter.trousers" ng-true-value="trousers"> Trousers
 								</label>
 			                </li>
 			                <li>
 			                    <label>
-								      <input type="checkbox"> Kitchen
+								      <input type="checkbox" ng-model="filter.kitchen" ng-true-value="kitchen"> Kitchen
 								</label>
 			                </li>
 			                <li>
 			                    <label>
-								      <input type="checkbox"> Cricket
+								      <input type="checkbox" ng-model="filter.cricket" ng-true-value="cricket"> Cricket
 								</label>
 			                </li>
 			                <li>
-			                    <a href="#/offlinePurchase" class="btn btn-primary">offline purchase</a>
+			                    <button class="btn btn-primary" ng-click="getFilterResult(filter)">submit</button>
 			                </li>
 			            </ul>
 			        </div>
 		   	   </div>
 		   	   <div class="col-md-10 mainContent" >
 		   	   	  <div class="row filter">
-		   	   	  	<div class="col-md-3 col-xs-3 col-md-offset-9">
+		   	   	  	<div class="col-md-4 col-xs-4 col-md-offset-8">
 		   	   	  		<select class="form-control" ng-model="sortByData">
-						  <option value="discount_pc">Discount %</option>
+						  <option value="discount_pc">Discount percent</option>
 						  <option value="valid_till">Expiry Date</option>
 						  <option value="rank">Ranking</option>
 						</select>
@@ -53,7 +53,7 @@
 		   	   	  </div>
 		   	   	  <hr>
 		   	   	  <div class="row">
-		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData | orderBy:sortByData | filter:filter">
+		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData | orderBy:sortByData">
 					    <div class="offer-small offer">
 					        <div class="vendor-image" style="background-color:#ffffff">
 					            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>

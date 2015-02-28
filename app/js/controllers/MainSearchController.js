@@ -30,6 +30,21 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 	  }
 	}
 
+	$scope.getFilterResult = function(filter){
+		var data = {};
+		    data.catagory = [];
+		    angular.forEach(filter, function(value, key) {
+			  data.catagory.push(value);
+			});
+		couponSearchService.filterSearch(data).then( 
+			 function(response){
+				$scope.resultData=response;
+			} , 
+			 function(status){$scope.emptyPage=true;alert("failed");}
+		);
+
+	}
+
     
     $scope.colourIncludes = [];
     
