@@ -5,7 +5,7 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 	$scope.rowCount=[];
     $scope.count=0;
     $scope.username = window.sessionStorage.getItem("username");
-	$scope.search = function(){
+	$scope.search = function($scope.username){
 		var query = $scope.query;
 		couponSearchService.search(query).then( 
 			 function(response){ $scope.resultData=response; $scope.emptyPage=false;} , 
@@ -30,7 +30,7 @@ couponFetcher.controller('mainSearchController',function($scope ,couponSearchSer
 	  }
 	}
 
-	$scope.getFilterResult = function(filter){
+	$scope.getFilterResult = function(filter,$scope.username){
 		var data = {};
 		    data.catagory = [];
 		    angular.forEach(filter, function(value, key) {
