@@ -52,22 +52,42 @@
 		   	   	  	</div>
 		   	   	  </div>
 		   	   	  <hr>
+		   	   	  <div class="row" style="background:pink;border:1px solid black;">
+		   	   	  	 <div class="col-md-3" id="c100127" ng-if="(coupon.rank==0 || coupon.rank==null)" ng-repeat="coupon in resultData | orderBy:sortByData">
+		   	   	  	 		<div class="offer-small offer" style="background:url('img/gift.jpg')">
+						        <div class="vendor-image" style="background-color:#ffffff">
+						            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>
+						        </div>
+						        <div id="c100127" class="offer-title ">
+						            <a href="#">{{coupon.coupon_info}} on {{coupon.prod_name}}</a>
+						        </div>
+					            <div class="offer-getcode">
+									<div href="#" class="btn btn-cd btn-coupon coupon-click" >Avail {{coupon.discount_pc}} %</div>
+					             </div>
+					             <div class="vendor-offer-count trim-content">
+				                	<a href="#">{{coupon.prod_category}}</a>
+				                </div> 
+						    </div>
+		   	   	  	 </div>
+		   	   	  </div>
 		   	   	  <div class="row">
 		   	   	  	 <div class="col-md-3" id="c100127" ng-repeat="coupon in resultData | orderBy:sortByData">
-					    <div class="offer-small offer">
-					        <div class="vendor-image" style="background-color:#ffffff">
-					            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>
-					        </div>
-					        <div id="c100127" class="offer-title ">
-					            <a href="#">{{coupon.coupon_info}} on {{coupon.prod_name}}</a>
-					        </div>
-				            <div class="offer-getcode">
-								<div href="#" class="btn btn-cd btn-coupon coupon-click" >Avail {{coupon.discount_pc}} %</div>
-				             </div>
-				             <div class="vendor-offer-count trim-content">
-			                	<a href="#">{{coupon.prod_category}}</a>
-			                </div> 
-					     </div>
+		   	   	  	 	<div ng-if="(coupon.rank!==0 || coupon.rank!==null)">
+		   	   	  	 		<div class="offer-small offer">
+						        <div class="vendor-image" style="background-color:#ffffff">
+						            <a href="#"><img src="img/{{coupon.coupon_issuer_site}}.jpg" alt="{{coupon.coupon_issuer_site}}"></a>
+						        </div>
+						        <div id="c100127" class="offer-title ">
+						            <a href="#">{{coupon.coupon_info}} on {{coupon.prod_name}}</a>
+						        </div>
+					            <div class="offer-getcode">
+									<div href="#" class="btn btn-cd btn-coupon coupon-click" >Avail {{coupon.discount_pc}} %</div>
+					             </div>
+					             <div class="vendor-offer-count trim-content">
+				                	<a href="#">{{coupon.prod_category}}</a>
+				                </div> 
+						     </div>
+		   	   	  	 	</div>
 					</div>
 		   	   	  </div>
 		   	   </div>
