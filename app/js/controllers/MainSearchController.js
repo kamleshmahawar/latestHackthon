@@ -1,10 +1,11 @@
 (function(){
 'use strict';
-couponFetcher.controller('mainSearchController',function($scope ,couponSearchService ){
-
-
+couponFetcher.controller('mainSearchController',function($scope ,couponSearchService,$routeParams ){
+	console.log($routeParams);
 	$scope.rowCount=[];
     $scope.count=0;
+    $scope.username = window.sessionStorage.getItem("username");
+    console.log($scope.username);
 	$scope.search = function(){
 		var query = $scope.query;
 		couponSearchService.search(query).then( 

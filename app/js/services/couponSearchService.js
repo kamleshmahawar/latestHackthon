@@ -25,6 +25,7 @@
 				return deferred.promise;
 		}
 		this.filterSearch = function(data){
+			console.log(data);
 			var deferred = $q.defer();
 				$http({
 							method : 'POST',
